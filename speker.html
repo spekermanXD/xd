@@ -1,0 +1,177 @@
+<!--
+Archivo: balones_hernan_asociados.html
+Descripción: Página web para BALONES HERNÁN Y ASOCIADOS
+- Formulario funcional (envío por correo a spekermanxd@gmail.com via FormSubmit)
+- Imágenes reales de balones
+- Estilo moderno azul y blanco
+- Responsive para móviles y escritorio
+-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BALONES HERNÁN Y ASOCIADOS</title>
+<meta name="description" content="Compra balones de fútbol profesionales, de entrenamiento o personalizados. Envía tu pedido al instante.">
+
+<!-- Estilos CSS internos -->
+<style>
+  :root{
+    --primary:#0b6efd;
+    --secondary:#ffffff;
+    --muted:#6b7280;
+    --card:#f8f9fa;
+    --success:#28a745;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:Arial,sans-serif;background:#f0f2f5;color:#111;line-height:1.5}
+  .container{max-width:1080px;margin:0 auto;padding:20px}
+
+  /* Header */
+  header{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap}
+  .brand{display:flex;align-items:center;gap:12px}
+  .logo{width:56px;height:56px;background:var(--primary);color:white;font-weight:bold;font-size:20px;display:flex;justify-content:center;align-items:center;border-radius:10px}
+  nav a{margin-left:14px;text-decoration:none;color:var(--muted);font-weight:600}
+
+  /* Hero */
+  .hero{display:grid;grid-template-columns:1fr 360px;gap:24px;margin-top:28px;align-items:center}
+  .hero-card{background:var(--card);border-radius:14px;padding:28px;box-shadow:0 6px 20px rgba(12,20,30,0.06)}
+  h1{margin:0;font-size:28px}
+  p.lead{color:var(--muted);margin-top:8px}
+  .cta{margin-top:18px;display:flex;gap:12px}
+  .btn{padding:10px 16px;border-radius:10px;border:0;font-weight:700;cursor:pointer}
+  .btn-primary{background:var(--primary);color:white}
+  .btn-outline{background:transparent;border:2px solid var(--primary);color:var(--primary)}
+
+  /* Productos */
+  .products{margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+  .product{background:var(--card);border-radius:12px;padding:14px;box-shadow:0 6px 18px rgba(12,20,30,0.05);display:flex;flex-direction:column}
+  .product img{width:100%;height:160px;object-fit:contain;border-radius:8px;background:#fff;padding:8px}
+  .product h3{margin:10px 0 6px}
+  .price{font-weight:800}
+  .badge{display:inline-block;padding:4px 8px;border-radius:999px;font-size:12px;background:#eef2ff;color:#0b3bff;margin-left:8px}
+
+  /* Contacto */
+  .contact{margin-top:22px;background:var(--card);padding:18px;border-radius:12px;display:grid;grid-template-columns:1fr 320px;gap:18px;align-items:center}
+  .field{display:flex;flex-direction:column;margin-bottom:8px}
+  label{font-size:13px;color:var(--muted);margin-bottom:6px}
+  input,textarea,select{padding:10px;border-radius:8px;border:1px solid #e6e9ef;font-size:14px}
+
+  .success-message{color:var(--success);font-weight:bold;margin-top:12px;display:none}
+
+  footer{margin-top:26px;padding:14px;text-align:center;color:var(--muted);font-size:14px}
+
+  @media (max-width:880px){.hero{grid-template-columns:1fr}.contact{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <div class="brand">
+    <div class="logo">BH</div>
+    <div>
+      <div style="font-weight:800">BALONES HERNÁN Y ASOCIADOS</div>
+      <div style="font-size:13px;color:var(--muted)">Calidad y entrega rápida en todo Perú</div>
+    </div>
+  </div>
+  <nav>
+    <a href="#productos">Productos</a>
+    <a href="#contacto">Pedidos</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-card">
+    <h1>Balones de fútbol para cada cancha y cada necesidad</h1>
+    <p class="lead">Compra balones profesionales, de entrenamiento o personalizados con envío a todo Perú.</p>
+    <div class="cta">
+      <button class="btn btn-primary" onclick="document.getElementById('contacto').scrollIntoView({behavior:'smooth'})">Hacer pedido</button>
+    </div>
+  </div>
+  <aside class="hero-card" style="display:flex;flex-direction:column;gap:10px;align-items:center;justify-content:center">
+    <img src="https://images.unsplash.com/photo-1601597112455-0b75e7b8dc5d?auto=format&fit=crop&w=400&q=80" alt="Balón profesional" style="border-radius:10px;box-shadow:0 10px 30px rgba(2,6,23,0.06)">
+    <div style="text-align:center">
+      <div style="font-weight:800">Balón Profesional</div>
+      <div style="color:var(--muted);font-size:13px">Precio desde S/179</div>
+    </div>
+  </aside>
+</section>
+
+<section id="productos">
+  <h2 style="margin-top:26px">Productos destacados</h2>
+  <div class="products">
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1601597112455-0b75e7b8dc5d?auto=format&fit=crop&w=400&q=80" alt="Balón de Entrenamiento">
+      <h3>Balón de Entrenamiento</h3>
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div>
+          <div class="price">S/59</div>
+          <div style="font-size:13px;color:var(--muted)">Ideal para escuelas y clubes</div>
+        </div>
+        <div><span class="badge">Más vendido</span></div>
+      </div>
+      <div style="margin-top:10px"><button class="btn btn-primary" onclick="document.getElementById('tipo').value='Balón de Entrenamiento'">Pedir</button></div>
+    </article>
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1610691567377-f7e4b4184e6a?auto=format&fit=crop&w=400&q=80" alt="Balón Profesional">
+      <h3>Balón Profesional</h3>
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div>
+          <div class="price">S/179</div>
+          <div style="font-size:13px;color:var(--muted)">Diseñado para competencias</div>
+        </div>
+        <div><span class="badge">Premium</span></div>
+      </div>
+      <div style="margin-top:10px"><button class="btn btn-primary" onclick="document.getElementById('tipo').value='Balón Profesional'">Pedir</button></div>
+    </article>
+
+    <article class="product">
+      <img src="https://images.unsplash.com/photo-1601597112479-5aa63ed74e7b?auto=format&fit=crop&w=400&q=80" alt="Balón Personalizado">
+      <h3>Balón Personalizado</h3>
+      <div style="display:flex;justify-content:space-between;align-items:center">
+        <div>
+          <div class="price">Desde S/99</div>
+          <div style="font-size:13px;color:var(--muted)">Agrega logos y nombres</div>
+        </div>
+        <div><span class="badge">Bajo pedido</span></div>
+      </div>
+      <div style="margin-top:10px"><button class="btn btn-primary" onclick="document.getElementById('tipo').value='Balón Personalizado'">Pedir</button></div>
+    </article>
+
+  </div>
+</section>
+
+<section id="contacto" class="contact">
+  <div>
+    <h3>Formulario de pedido</h3>
+    <form id="pedidoForm" action="https://formsubmit.co/spekermanxd@gmail.com" method="POST" target="_blank">
+      <div class="field"><label for="nombre">Nombre</label><input id="nombre" name="nombre" required placeholder="Tu nombre"></div>
+      <div class="field"><label for="email">Correo electrónico</label><input id="email" type="email" name="email" required placeholder="tucorreo@ejemplo.com"></div>
+      <div class="field"><label for="tipo">Tipo de balón</label><select id="tipo" name="tipo" required><option value="">Selecciona...</option><option value="Balón de Entrenamiento">Balón de Entrenamiento</option><option value="Balón Profesional">Balón Profesional</option><option value="Balón Personalizado">Balón Personalizado</option></select></div>
+      <div class="field"><label for="cantidad">Cantidad</label><input id="cantidad" type="number" name="cantidad" required min="1" placeholder="1"></div>
+      <div class="field"><label for="mensaje">Mensaje adicional</label><textarea id="mensaje" name="mensaje" rows="3" placeholder="Información extra..." required></textarea></div>
+      <input type="hidden" name="_next" value="https://formsubmit.co/thank-you">
+      <div><button type="submit" class="btn btn-primary">Enviar pedido</button></div>
+      <div class="success-message" id="successMsg">✅ ¡Pedido enviado con éxito!</div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  © <span id="year"></span> BALONES HERNÁN Y ASOCIADOS — Hecho con pasión.
+</footer>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const form = document.getElementById('pedidoForm');
+  form.addEventListener('submit', function(e){
+    setTimeout(()=>{document.getElementById('successMsg').style.display='block';},500);
+  });
+</script>
+
+</body>
+</html>
